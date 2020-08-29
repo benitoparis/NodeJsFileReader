@@ -4,11 +4,12 @@ type MatchData = [Date, string, string, number, number, String, string];
 
 export class MatchReader {
 
-    data: MatchData[] = [];
+    public data: MatchData[] = [];
 
     constructor(private matches: string[][]){
 
-        this.data = this.matches.map((row: string[]): MatchData => {
+        this.data = this.matches.map((row: string[], index): MatchData => {
+
             return [
                 new Date(row[0]),
                 row[1].toString(),
@@ -17,13 +18,7 @@ export class MatchReader {
                 parseInt(row[4]),
                 row[5].toString(),
                 row[6].toString(),
-
             ];
         })
-    };
-
-
-
-
-    
+    };  
 }

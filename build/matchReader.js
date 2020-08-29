@@ -4,7 +4,7 @@ var MatchReader = /** @class */ (function () {
     function MatchReader(matches) {
         this.matches = matches;
         this.data = [];
-        this.data = this.matches.map(function (row) {
+        this.data = this.matches.map(function (row, index) {
             return [
                 new Date(row[0]),
                 row[1].toString(),

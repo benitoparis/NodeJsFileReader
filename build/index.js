@@ -1,6 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var csvFileReader_1 = require("./csvFileReader");
+var matchReader_1 = require("./matchReader");
+var htmlReport_1 = require("./htmlReport");
 var reader = new csvFileReader_1.CsvFileReader('original.csv');
 reader.read();
-console.log('reader data', reader.data);
+console.log('reader.data', reader.data[reader.data.length - 2]);
+var matchReader = new matchReader_1.MatchReader(reader.data);
+matchReader;
+console.log('matchReader.data', matchReader.data);
+var htmlReport = new htmlReport_1.HtmlReport();
+htmlReport.createHtmlFile();

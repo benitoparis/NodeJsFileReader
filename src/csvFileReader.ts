@@ -15,6 +15,8 @@ export class CsvFileReader {
         .map((match:string): string[] => {
             return match.split(',');
         });
+
+        this.data.pop()
     }
 
 }
