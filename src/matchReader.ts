@@ -1,5 +1,5 @@
 
-type MatchData = [Date, string, string, number, number, String, string];
+type MatchData = [Date, string, string, number, number, String];
 
 
 export class MatchReader {
@@ -16,8 +16,7 @@ export class MatchReader {
                 row[2].toString(),
                 parseInt(row[3]),
                 parseInt(row[4]),
-                row[5].toString(),
-                row[6].toString(),
+                row[5].toString()
             ];
         })
     };  
